@@ -11,9 +11,9 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "EXTEND_ESLINT=true react-scripts start",
+    "build": "EXTEND_ESLINT=true react-scripts build",
+    "test": "EXTEND_ESLINT=true react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier prettier.config.js src/**/*.{js,jsx} --write",
     "lint:fix": "eslint src/**/*.{js,jsx} --fix"
@@ -60,7 +60,8 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "yarn pretty-quick",
-      "eslint --cache --fix"
+      "eslint --cache --fix",
+      "git add"
     ]
   }
 }
