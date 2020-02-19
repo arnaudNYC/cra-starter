@@ -16,8 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier prettier.config.js src/**/*.{js,jsx} --write",
-    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
-    "pretty-quick": "pretty-quick"
+    "lint:fix": "eslint src/**/*.{js,jsx} --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -60,7 +59,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "pretty-quick",
+      "yarn pretty-quick",
       "eslint --cache --fix"
     ]
   }
