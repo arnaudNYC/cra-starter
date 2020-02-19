@@ -59,9 +59,8 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "yarn pretty-quick",
       "eslint --cache --fix",
-      "git add"
+      "yarn pretty-quick"
     ]
   }
 }
