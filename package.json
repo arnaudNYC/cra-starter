@@ -1,5 +1,5 @@
 {
-  "name": "templated",
+  "name": "@arnaudnyc/cra-starter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,8 +14,7 @@
     "start": "EXTEND_ESLINT=true react-scripts start",
     "build": "EXTEND_ESLINT=true react-scripts build",
     "test": "EXTEND_ESLINT=true react-scripts test",
-    "eject": "react-scripts eject",
-    "prettier": "prettier prettier.config.js src/**/*.{js,jsx} --write",
+    "prettier": "prettier *.js src/**/*.{js,jsx} --write",
     "lint:fix": "eslint src/**/*.{js,jsx} --fix"
   },
   "eslintConfig": {
@@ -60,7 +59,7 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --cache --fix",
-      "yarn pretty-quick"
+      "pretty-quick --staged"
     ]
   }
 }
