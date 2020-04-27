@@ -61,7 +61,8 @@
   "lint-staged": {
     "*.js": [
       "prettier --write",
-      "eslint --cache --fix"
+      "eslint --cache --fix",
+      "EXTEND_ESLINT=true react-scripts test --watchAll=false --coverage"
     ]
   },
   "jest": {
