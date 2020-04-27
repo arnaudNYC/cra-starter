@@ -26,7 +26,8 @@
     ],
     "rules": {
       "react/jsx-filename-extension": "off"
-    }
+    },
+    "reportUnusedDisableDirectives": true
   },
   "browserslist": {
     "production": [
@@ -41,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.10.0",
@@ -62,7 +64,7 @@
     "*.js": [
       "prettier --write",
       "eslint --cache --fix",
-      "EXTEND_ESLINT=true react-scripts test --watchAll=false --coverage"
+      "cross-env CI=true react-scripts test --findRelatedTests"
     ]
   },
   "jest": {
