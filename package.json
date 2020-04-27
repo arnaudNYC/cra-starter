@@ -6,16 +6,16 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "EXTEND_ESLINT=true react-scripts start",
     "build": "EXTEND_ESLINT=true react-scripts build",
     "test": "EXTEND_ESLINT=true react-scripts test",
-    "prettier": "prettier *.js src/**/*.{js,jsx} --write",
-    "lint:fix": "eslint src/**/*.{js,jsx} --fix"
+    "prettier": "prettier *.js src/**/*.js --write",
+    "lint:fix": "eslint src --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -23,7 +23,10 @@
       "plugin:react/recommended",
       "airbnb",
       "plugin:prettier/recommended"
-    ]
+    ],
+    "rules": {
+      "react/jsx-filename-extension": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -48,8 +51,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^4.2.3",
     "lint-staged": ">=10",
-    "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1"
+    "prettier": "^1.19.1"
   },
   "husky": {
     "hooks": {
@@ -57,9 +59,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --cache --fix",
-      "pretty-quick --staged"
+    "*.js": [
+      "prettier --write",
+      "eslint --cache --fix"
     ]
   }
 }
