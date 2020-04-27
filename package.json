@@ -61,7 +61,18 @@
   "lint-staged": {
     "*.js": [
       "prettier --write",
-      "eslint --cache --fix"
+      "eslint --cache --fix",
+      "EXTEND_ESLINT=true react-scripts test --coverage"
     ]
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
   }
 }
