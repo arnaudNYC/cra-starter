@@ -64,7 +64,7 @@
     "*.js": [
       "prettier --write",
       "eslint --cache --fix",
-      "cross-env CI=true react-scripts test --findRelatedTests"
+      "cross-env CI=true EXTEND_ESLINT=true react-scripts test --coverage --coverageThreshold --passWithNoTests"
     ]
   },
   "jest": {
